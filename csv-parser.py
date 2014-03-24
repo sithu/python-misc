@@ -6,10 +6,10 @@ def read(infile='input.csv',outfile='output.csv'):
    
    for row in reader:
       if row:
-         names = row[0]
-         for each in names.split():
-            row[0] = each
-            writer.writerow(row)
+         sid = row[0]
+         sid = sid[2:]
+         print "'%s': 0," % sid
+         writer.writerow(sid)
    
    
-read("input.csv")
+read("all-students.csv")
